@@ -1,0 +1,388 @@
+```css
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+
+/* =========================
+   Navbar
+========================= */
+
+header {
+    background: #1e3a8a;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #bfdbfe;
+}
+
+
+/* =========================
+   Main
+========================= */
+
+main {
+    width: 86%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+
+/* =========================
+   Dashboard
+========================= */
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #6b7280;
+}
+
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    background: #dbeafe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.stat-card h3 {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    font-size: 27px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+
+/* =========================
+   Common Section
+========================= */
+
+.form-section,
+.books-section {
+    background: white;
+    margin-top: 35px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.section-heading p {
+    color: #6b7280;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+#bookForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.controls input,
+.controls select {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.controls input:focus,
+.controls select:focus {
+    border-color: #2563eb;
+}
+
+
+.add-btn {
+    grid-column: span 2;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   Search Controls
+========================= */
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.controls input {
+    flex: 1;
+}
+
+.controls select {
+    width: 220px;
+}
+
+
+/* =========================
+   Table
+========================= */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+thead {
+    background: #eff6ff;
+}
+
+th {
+    text-align: left;
+    padding: 14px;
+    color: #1e3a8a;
+    font-size: 14px;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+/* =========================
+   Status
+========================= */
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.available {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.issued {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.action-btn {
+    border: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.issue-btn {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.return-btn {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   No Books
+========================= */
+
+.no-books {
+    text-align: center;
+    padding: 30px;
+    color: #6b7280;
+    display: none;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    margin-top: 50px;
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    #bookForm {
+        grid-template-columns: 1fr;
+    }
+
+    .add-btn {
+        grid-column: span 1;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls select {
+        width: 100%;
+    }
+
+    main {
+        width: 92%;
+    }
+}
+```
